@@ -13,8 +13,5 @@ jobs:
       - name: 'Dispatch lint check to Vercel'
         uses: 'vercel/repository-dispatch/actions/status@v1'
         with:
-          name: Vercel - techshackapp: lint
-          # This action sends a status update. You may need to configure
-          # a corresponding check on the Vercel side or add an auth token
-          # if required by your Vercel project settings.
+          name: 'Vercel - techshackapp: lint'
           token: ${{ secrets.GITHUB_TOKEN }}
