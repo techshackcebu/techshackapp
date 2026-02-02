@@ -104,6 +104,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        webView.loadUrl("file:///android_asset/index.html")
+        // Load your live web application
+        webView.loadUrl("https://techshackapp.vercel.app/")
     }
 }

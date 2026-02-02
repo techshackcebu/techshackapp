@@ -1,0 +1,20 @@
+name: 'Vercel Status Checks'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-vercel:
+    name: 'Notify Vercel of new commit'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Dispatch lint check to Vercel'
+        uses: 'vercel/repository-dispatch/actions/status@v1'
+        with:
+          name: Vercel - techshackapp: lint
+          # This action sends a status update. You may need to configure
+          # a corresponding check on the Vercel side or add an auth token
+          # if required by your Vercel project settings.
+          token: ${{ secrets.GITHUB_TOKEN }}
