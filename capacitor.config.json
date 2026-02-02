@@ -1,0 +1,9 @@
+{
+  "appId": "com.techshack.techshack",
+  "appName": "TechShack",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
