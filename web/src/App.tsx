@@ -15,19 +15,19 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-white">
-      <header className="bg-[#FC4C02] text-white p-4 pt-safe-top">
-        <h1 className="text-xl font-bold italic">TECHSHACK</h1>
+    <div className="flex flex-col h-screen bg-gray-100">
+      <header className="bg-brand text-brand-foreground p-4 pt-safe-top shadow-md">
+        <h1 className="text-xl font-black italic tracking-tighter">TECHSHACK</h1>
       </header>
       <main className="flex-1 overflow-y-auto">{renderScreen()}</main>
-      <nav className="bg-gray-50 border-t pb-safe-bottom flex justify-around h-16">
-        <button onClick={() => setActiveTab('waitlist')} className={`flex flex-col items-center justify-center w-full ${activeTab === 'waitlist' ? 'text-[#FC4C02]' : 'text-gray-400'}`}>
-          <ClipboardList size={22} />
-          <span className="text-xs">Waitlist</span>
+      <nav className="bg-white border-t pb-safe-bottom flex justify-around h-20 shadow-inner">
+        <button onClick={() => setActiveTab('waitlist')} className={`flex flex-col items-center justify-center w-full transition-colors ${activeTab === 'waitlist' ? 'text-brand' : 'text-gray-400'}`}>
+          <ClipboardList size={28} />
+          <span className="text-xs font-bold mt-1">Waitlist</span>
         </button>
-        <button onClick={() => setActiveTab('intake')} className={`flex flex-col items-center justify-center w-full ${activeTab === 'intake' ? 'text-[#FC4C02]' : 'text-gray-400'}`}>
-          <Home size={22} />
-          <span className="text-xs">Intake</span>
+        <button onClick={() => setActiveTab('intake')} className={`flex flex-col items-center justify-center w-full transition-colors ${activeTab === 'intake' ? 'text-brand' : 'text-gray-400'}`}>
+          <Home size={28} />
+          <span className="text-xs font-bold mt-1">Intake</span>
         </button>
       </nav>
     </div>
